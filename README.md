@@ -1,3 +1,3 @@
 # rckr
 
-[SOLVED]populatioN problem by rckr softwares
+[SOLVED]population problem by rckr softwares
