@@ -1,11 +1,10 @@
 from math import radians, sin, cos, atan2, sqrt
 import requests
 
-d = requests.get(
-    "https://cdn.jsdelivr.net/gh/apilayer/restcountries@3dc0fb110cd97bce9ddf27b3e8e1f7fbe115dc3c/src/main/resources/countriesV2.json")
-data = d.json()
+data = requests.get(
+    "https://cdn.jsdelivr.net/gh/apilayer/restcountries@3dc0fb110cd97bce9ddf27b3e8e1f7fbe115dc3c/src/main/resources/countriesV2.json").json()
 
-population_limit=int(input("Enter population limit "))
+population_limit=int(input("Enter population limit:- "))
 
 # counting every currencies reoccurance and finds the exclusive unique currencies
 count = {}
@@ -47,4 +46,4 @@ total = float(0)
 for i in range(len(coordinates)-1):
     for k in range(i+1,len(coordinates)):
         total += getlength(coordinates[i][1], coordinates[k][1])
-print(round(total, 2))
+print("Total length of all possible lines =",round(total, 2))
